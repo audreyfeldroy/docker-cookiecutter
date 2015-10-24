@@ -1,6 +1,12 @@
 # docker-cookiecutter
 
-Work in progress.
+Cookiecutter in a Docker container.
+
+# Usage
+
+```
+docker run -e LC_ALL=C.UTF-8 -t cookiecutter gh:pydanny/cookiecutter-django
+```
 
 # Contributing
 
