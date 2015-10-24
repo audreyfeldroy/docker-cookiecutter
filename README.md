@@ -6,10 +6,12 @@ This almost works. I'm just stuck on figuring this out:
 
 * https://github.com/audreyr/docker-cookiecutter/issues/1
 
+Docker Hub repo: https://hub.docker.com/r/cookiecutter/cookiecutter/
+
 # Usage
 
 ```
-docker run -e LC_ALL=C.UTF-8 -t cookiecutter gh:pydanny/cookiecutter-django
+docker run -e LC_ALL=C.UTF-8 -t cookiecutter/cookiecutter gh:pydanny/cookiecutter-django
 ```
 
 # Contributing
