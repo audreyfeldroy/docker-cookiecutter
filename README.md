@@ -2,6 +2,10 @@
 
 Cookiecutter in a Docker container.
 
+This almost works. I'm just stuck on figuring this out:
+
+* https://github.com/audreyr/docker-cookiecutter/issues/1
+
 # Usage
 
 ```
