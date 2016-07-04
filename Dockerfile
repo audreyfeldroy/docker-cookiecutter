@@ -1,7 +1,14 @@
-FROM python:3.5
-MAINTAINER Audrey Roy Greenfeld (GitHub @audreyr / Docker @aroygreenfeld)
+FROM alpine:3.2
+MAINTAINER Ivan Pedrazas <ipedrazas@gmail.com>
 
-# Install Cookiecutter
-RUN pip install --no-cache-dir cookiecutter
+RUN apk add --update \
+      python \
+      python-dev \
+      py-pip \
+      g++ && \
+      pip install cookiecutter && \
+      apk del g++ py-pip  python-dev && \
+      rm -rf /var/cache/apk/*
 
-ENTRYPOINT ["cookiecutter"]
+
+ENTRYPOINT [ "cookiecutter" ]
