@@ -7,6 +7,7 @@ RUN apk add --no-cache \
       python-dev \
       py-pip \
       git \
+      openssh \
       g++ && \
       pip install cookiecutter && \
       apk del g++ py-pip  python-dev && \
