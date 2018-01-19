@@ -1,4 +1,4 @@
-FROM alpine:3.2
+FROM alpine:latest
 MAINTAINER Ivan Pedrazas <ipedrazas@gmail.com>
 
 RUN apk add --update \
