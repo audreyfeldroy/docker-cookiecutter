@@ -1,14 +1,16 @@
-FROM alpine:3.2
+FROM alpine:3.5
 MAINTAINER Ivan Pedrazas <ipedrazas@gmail.com>
 
 RUN apk add --update \
-      python \
-      python-dev \
-      py-pip \
-      g++ && \
-      pip install cookiecutter && \
-      apk del g++ py-pip  python-dev && \
-      rm -rf /var/cache/apk/*
+	git \
+	python \
+	python-dev \
+	py-pip \
+	g++ && \
+	pip install cookiecutter && \
+	apk del g++ py-pip python-dev && \
+	rm -rf /var/cache/apk/* && \
+	printf "#!/bin/sh \ncookiecutter -o \$OUT_DIR \$TEMPLATE" > start.sh && \
+	chmod +x start.sh
 
-
-ENTRYPOINT [ "cookiecutter" ]
+CMD ["./start.sh"]
