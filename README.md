@@ -14,7 +14,7 @@ docker run -it --rm \
 	-e LC_ALL=C.UTF-8
 	-e TEMPLATE=gh:pydanny/cookiecutter-django \
 	-e OUT_DIR=/cookie \
-	-v $(PWD):/cookie \
+	-v $PWD:/cookie \
 	cookiecutter/cookiecutter
 ```
 
