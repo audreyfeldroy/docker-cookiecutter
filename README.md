@@ -2,16 +2,20 @@
 
 Cookiecutter in a Docker container.
 
-This almost works. I'm just stuck on figuring this out:
-
-* https://github.com/audreyr/docker-cookiecutter/issues/1
+This writes output to the current working dir.
 
 Docker Hub repo: https://hub.docker.com/r/cookiecutter/cookiecutter/
 
 # Usage
+A sample command:
 
-```
-docker run -e LC_ALL=C.UTF-8 -t cookiecutter/cookiecutter gh:pydanny/cookiecutter-django
+```console
+docker run -it --rm \
+	-e LC_ALL=C.UTF-8 \
+	-e TEMPLATE=gh:pydanny/cookiecutter-django \
+	-e OUT_DIR=/cookie \
+	-v $PWD:/cookie \
+	cookiecutter/cookiecutter
 ```
 
 # Contributing
