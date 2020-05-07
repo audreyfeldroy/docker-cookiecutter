@@ -5,6 +5,7 @@ RUN apk add --update \
       python \
       python-dev \
       py-pip \
+      git \
       g++ && \
       pip install cookiecutter && \
       apk del g++ py-pip  python-dev && \
